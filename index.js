@@ -1,18 +1,24 @@
-
 let shareButton=document.getElementById("simpleshare");
-// console.log(shareButton);
-let file=new URL("")
-shareButton.addEventListener("click",onShare)
-function onShare() {
-  // ...
-  if (navigator.share) {
-  //Your code here
-    alert(`success`);
-  } else {
-    alert(`Not supported !!`);
-  }
- }
+shareButton.addEventListener('click', function () {
+  var filesArray = document.getElementById('share-files').files
+console.log(document.getElementById('share-files'));
+  var shareData = { files: filesArray };
 
+  if (navigator.canShare && navigator.canShare(shareData)) {
+
+  // Adding title afterwards as navigator.canShare just
+  // takes files as input
+  shareData.title = "Cowin"
+  shareData.url="https://www.flipkart.com/"
+
+  navigator.share(shareData)
+  .then(() => console.log('Share was successful.'))
+  .catch((error) => console.log('Sharing failed', error));
+
+  } else {
+  console.log("Your system doesn't support sharing files.");
+  }
+})
 
 
 function getMobileOperatingSystem() {
@@ -31,35 +37,35 @@ function getMobileOperatingSystem() {
   }
 function Aarogya() {
     let os = getMobileOperatingSystem();
-    if (os == "Android") {
+    if (os === "Android") {
       window.location.href = "https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_IN&gl=US";
-    } else if (os == "iOS") {
+    } else if (os === "iOS") {
       window.location.href = "https://apps.apple.com/in/app/aarogyasetu/id1505825357";
-    } else if (os == "Windows Phone") {
+    } else if (os === "Windows Phone") {
       window.location.href = "https://www.mygov.in/aarogya-setu-app/";
     } else {
       window.open("https://www.mygov.in/aarogya-setu-app/", "_blank");
     }
 }
-function Umang() {
+let  Umang=()=> {
     let os = getMobileOperatingSystem();
-    if (os == "Android") {
+    if (os === "Android") {
       window.location.href = "https://play.google.com/store/apps/details?id=in.gov.umang.negd.g2c";
-    } else if (os == "iOS") {
+    } else if (os === "iOS") {
       window.location.href = "https://apps.apple.com/in/app/umang/id1236448857";
-    } else if (os == "Windows Phone") {
+    } else if (os === "Windows Phone") {
       window.location.href = "https://web.umang.gov.in/landing/";
     } else {
       window.open("https://web.umang.gov.in/landing/","_blank");
     }
 }
-function Cowin() {
+function  Cowin () {
     let os = getMobileOperatingSystem();
-    if (os == "Android") {
+    if (os === "Android") {
       window.location.href = "https://play.google.com/store/apps/details?id=com.cowinapp.app&hl=en_IN&gl=US";
-    } else if (os == "iOS") {
+    } else if (os === "iOS") {
       window.location.href = "https://www.cowin.gov.in/home";
-    } else if (os == "Windows Phone") {
+    } else if (os === "Windows Phone") {
       window.location.href = "https://www.cowin.gov.in/home";
     } else {
       window.open("https://www.cowin.gov.in/home", "_blank");
