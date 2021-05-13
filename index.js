@@ -21,7 +21,7 @@ let shareButton=document.getElementById("simpleshare");
 // })
 
 function shareNow(fileName) {
-  fetch("/images" + fileName)
+  fetch("images/" + fileName)
 .then(function(response) {
   console.log(response)
 return response.arrayBuffer()
