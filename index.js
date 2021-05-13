@@ -1,54 +1,3 @@
-let shareButton=document.getElementById("simpleshare");
-// shareButton.addEventListener('click', function () {
-//   var filesArray = document.getElementById('share-files').files
-// console.log(document.getElementById('share-files'));
-//   var shareData = { files: filesArray };
-
-//   if (navigator.canShare && navigator.canShare(shareData)) {
-
-//   // Adding title afterwards as navigator.canShare just
-//   // takes files as input
-//   shareData.title = "Cowin"
-//   shareData.url="https://www.flipkart.com/"
-
-//   navigator.share(shareData)
-//   .then(() => console.log('Share was successful.'))
-//   .catch((error) => console.log('Sharing failed', error));
-
-//   } else {
-//   console.log("Your system doesn't support sharing files.");
-//   }
-// })
-
-function shareNow(fileName) {
-  fetch("images/" + fileName)
-.then(function(response) {
-  console.log(response)
-return response.arrayBuffer()
-})
-.then(function(fileBuffer) {
-  console.log(fileBuffer)
-var file = new File([fileBuffer], fileName, {type: "image/png"});
-console.log(file);
-var filesArray = [file];
-      console.log("filesArray", filesArray);
-
-if(navigator.canShare && navigator.canShare({ files: filesArray })) {
-navigator.share({
-  files: filesArray,
-  url: ''
-})
-    .then(() => console.log("Share was successful."))
-    .catch((error) => console.log("Sharing failed", error));
-}
- else {
-  console.log("Your system doesn't support sharing files.");
-}
-});
-}
-
-  
-
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     // Windows Phone must come first because its UA also contains "Android"
@@ -75,7 +24,7 @@ function Aarogya() {
       window.open("https://www.mygov.in/aarogya-setu-app/", "_blank");
     }
 }
-let  Umang=()=> {
+function Umang() {
     let os = getMobileOperatingSystem();
     if (os === "Android") {
       window.location.href = "https://play.google.com/store/apps/details?id=in.gov.umang.negd.g2c";
@@ -99,3 +48,29 @@ function  Cowin () {
       window.open("https://www.cowin.gov.in/home", "_blank");
     }
 }
+
+function shareNow(fileName) {
+        fetch("images/" + fileName)
+  .then(function(response) {
+    return response.arrayBuffer()
+  })
+  .then(function(fileBuffer) {
+
+    var file = new File([fileBuffer], fileName, {type: "image/png"});
+    var filesArray = [file];
+            console.log("filesArray", filesArray);
+
+    if(navigator.canShare && navigator.canShare({ files: filesArray })) {
+      navigator.share({
+        files: filesArray,
+        url: ''
+      })
+          .then(() => console.log("Share was successful."))
+          .catch((error) => console.log("Sharing failed", error));
+    }
+       else {
+        alert("This feature is only available on mobile phones");
+      }
+  });
+}
+

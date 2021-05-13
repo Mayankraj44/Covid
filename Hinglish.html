@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:500,normal"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="https://khatabook-assets.s3.amazonaws.com/static/images/index/favicon-kb.svg">
+    <link rel="stylesheet" href="index.css" />
+    <title>Covid Care</title>
+  </head>
+
+  <body>
+    <div class=" logo">
+      
+      <img class="khatabook " src="./images/Khatabook.svg">
+    
+    </div>
+    <div class="container-fluid green-box banner">
+      <div class="heading">
+        Vaccine lagwayein, COVID-19 ko harayein!
+
+      </div>
+
+      <div class="subheading">
+        "Apne aap ko aur apne priyajano ko coronavirus se bachane ke liye vaccine lagwayein. Vaccine lagwayein aur jeet ki taraf kadam badhayein!
+        "
+      </div>
+      
+    </div>
+
+    <div class="container-fluid">
+      <!-- Fold 2 -->
+      <div class="container fold2">
+        <div class="fold2-title">
+          Vaccine aapki suraksha kaise karti hai?
+
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="./images/fold2-pic1.svg" height="40px" width="40px" />
+          </div>
+          <div class="col fold2-text">
+            Vaccine aapki immunity ko badhati hai aur aapko virus se ladne mein madad karti hai
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="./images/fold2-pic2.svg" height="40px" width="40px" />
+          </div>
+          <div class="col fold2-text">
+            Weh virus aapke contacts mein failane ke jokhim ko bhi kam karti hai
+
+        </div>
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="./images/fold2-pic3.svg" height="40px" width="40px" />
+          </div>
+          <div class="col fold2-text">
+            Weh virus se infected hone par bhi aapko gambhir complications se bachne mein madad karti hai
+
+          </div>
+        </div> 
+      </div>
+
+      <!-- Fold 3 -->
+
+      <div class="container fold3">
+        <div class="fold3-title d-flex justify-content-center">
+          Vaccine kaise lagwayein?
+
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="badge bg-success rounded-pill">1</div>
+            <div class="list-text">
+              
+              Ek photo ID proof ka use karte huye <a href="https://www.cowin.gov.in" target="_blank">cowin.gov.in </a>  par register ya sign in karein
+
+            </div>
+            
+            <img class="images" src="images/fold3-pic1.svg" width="40px" >
+          </li>
+          <li class="list-group-item">
+            <div class="badge bg-success rounded-pill">2</div>
+            <div class="list-text">
+              Ek hi mobile number ka use karte huye 4 members tak ko add karein
+
+            </div>
+            <img class="images" src="images/fold3-pic2.svg" width="40px" >
+          </li>
+          <li class="list-group-item">
+            <div class="badge bg-success rounded-pill">3</div>
+            <div class="list-text">
+              District ya PIN code ke maadhyam se vaccination centres search karein aur slot book karein
+
+            </div>
+            <img class="images" src="images/fold3-pic3.svg" width="40px" >
+          </li>
+          <li class="list-group-item">
+            <div class="badge bg-success rounded-pill">4</div>
+            <div class="list-text">
+              Vaccination centre mein register karte samay use kiya hua apna photo ya ID jarur le jayein
+
+            </div>
+            <img class="images" src="images/fold3-pic4.svg" width="40px" >
+          </li>
+          <div class="fold3-footer">
+            <div class="row justify-content-between">
+              <div class="col-8 text">
+                Dusron ke saath yeh suchna share karein
+
+              </div>
+              <div class="col-4 icons">
+                <!-- <img src="./images/whatsapp.svg"  style="margin-right:10px"> -->
+                <img id="simpleshare" src="./images/share.svg" onClick="shareNow('ShareImg_Hinglish.png')"/>
+              </div>
+           
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <!-- Fold 4 -->
+
+      <div class="container fold4">
+        <div class="fold4-title justify-content-center">
+          Aap aur kahan registration kar sakte hain? 
+
+        </div>
+        <div class="row justify-content-center fold4-images">
+          <div class="col-4">
+          <a onclick="Aarogya()">
+            <img class="images" src="images/Aarogya.svg" >
+          </a>
+          </div>
+          <div class="col-4">
+            <a onclick="Umang()">
+              <img class="images" src="images/Umang.svg">
+            </a>
+          </div>
+          <div class="col-4">
+            <a onclick="Cowin()">
+              <img class="images"src="images/Cowin.svg">
+            </a>
+          </div>
+        </div>
+        <div class=" row justify-content-center">
+          <div class="col-4 subtext">
+           Aarogya Setu
+          </div>
+          <div class="col-4 subtext">
+            Umang
+          </div>
+          <div class="col-4 subtext">
+            Cowin
+          </div>
+        </div>
+      </div>
+      
+      <!-- Fold 5 -->
+
+      <div class="container fold5">
+        <div class="fold2-title col">
+          Vaccine ke baad...
+
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="./images/fold5-pic1.svg" height="40px" />
+          </div>
+          <div class="col fold2-text">
+            Koi bhi takleef samanya hai. Ghabrayein nahin aur doctor se consult karein
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="./images/fold5-pic2.svg" height="40px" />
+          </div>
+          <div class="col fold2-text">
+            Vaccine ka dusra dose lena na bhulein
+
+          </div>
+        </div>
+        
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="./images/fold5-pic3.svg" height="40px" />
+          </div>
+          <div class="col fold2-text">
+            Hamesha mask pehne rahein aur lagatar haath dhoyein
+
+          </div>
+        </div>
+        
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="./images/fold5-pic4.svg" height="40px" />
+          </div>
+          <div class="col fold2-text">
+            Bina zarurat ke bahar na jayein
+
+          </div>
+        </div>
+        
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img src="./images/fold5-pic5.svg" height="40px" />
+          </div>
+          <div class="col fold2-text">
+            Dusro ko vaccine lagwane ke liye encourage karein
+
+          </div>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    <div class=" container-fluid message">
+      <div class="text justify-content-center">
+        Vaccine lagwayein, surakshit rahein!
+
+      </div>
+      
+      
+    </div>
+  
+       <!-- Footer  -->
+
+       <div class="footer">
+        <a href="https://selfregistration.cowin.gov.in/" target="_blank">
+         <button type="button" class="register btn btn-primary">CoWIN par register karein
+        </button>
+       </a>
+     </div>
+    
+   
+    
+    
+  </body>
+  <script src="index.js"></script>
+</html>
+

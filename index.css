@@ -2,13 +2,13 @@ body {
   font-family: Roboto, sans-serif;
 }
 .logo {
-  padding-right: 10%px !important;
-  margin-top: 11px;
+  padding-right: 5% !important;
+  margin-top: 1%;
   margin-bottom: 8px;
 }
 .khatabook {
   position: relative;
-  left: 70%;
+  left: 80%;
   width: 20%;
 }
 .banner {
@@ -86,24 +86,15 @@ body {
 }
 .fold3 .images {
   height: 40px;
-  /* border-radius: 50%; */
+ 
   position: absolute;
-  /* align-content: space-between; */
 
   top: 10%;
   right: 9px;
   bottom: 0;
-  /* align-items: center;  */
+
 }
-/* .fold3 .list-group-item .light-blue-box {
-  width: 47px;
-  height: 39px;
-  background: rgba(122, 203, 180, 0.2);
-  border-radius: 4px 4px 0px 0px;
-  position: absolute;
-  bottom: 0;
-  right: 9px;
-} */
+
 .fold3 .list-group-item .list-text {
   width: 74%;
   vertical-align: middle;
@@ -143,11 +134,11 @@ body {
 }
 .fold4 .images {
   height: 40px;
-  /* border-radius: 50%; */
+ 
 }
 .fold4 {
   margin-top: 32px;
-  /* background: #e4f5f0; */
+
   border-radius: 4px;
   padding-bottom: 31px;
 }
