@@ -1,20 +1,19 @@
 body {
   font-family: Roboto, sans-serif;
 }
-.logo{
-  padding-right:10%px !important;
-  margin-top:11px;
-  margin-bottom:8px;
+.logo {
+  padding-right: 10%px !important;
+  margin-top: 11px;
+  margin-bottom: 8px;
 }
-.khatabook{
-  position:relative;
-  left:70%;
+.khatabook {
+  position: relative;
+  left: 70%;
   width: 20%;
-  
 }
 .banner {
   position: relative;
-  background-image: url("./images/Top\ banner.png");
+  background-image: url("./images/Top banner.svg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 33% 9% 8%;
@@ -162,7 +161,7 @@ body {
   margin-bottom: 24px;
 }
 .fold4 .col-4 {
-  border-right: solid #F0F2F4 1px;
+  border-right: solid #f0f2f4 1px;
 }
 .fold4 .col-4:last-child {
   border-right: 0px;
@@ -195,7 +194,6 @@ body {
   text-align: center;
 
   width: 100%;
- 
 }
 .justify-content-center {
   text-align: center;
@@ -203,12 +201,11 @@ body {
 .message {
   position: relative;
   background-image: url("./images/Banner_bottom.svg");
-  /* background-color: red; */
+  
   background-repeat: no-repeat;
   background-size: cover;
   height: 80px;
-  /* padding: 40px 20%; */
-  /* width: 100%;  */
+ 
   padding : 16% 0px 15% 0px;
   margin-bottom:80px;
 }
@@ -216,8 +213,6 @@ body {
   font-weight: 500;
 font-size: 4vw;
 line-height: 21px;
-/* identical to box height, or 131% */
-
 letter-spacing: 0.01em;
 
 color: #FFFFFF;

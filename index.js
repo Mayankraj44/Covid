@@ -1,25 +1,53 @@
 let shareButton=document.getElementById("simpleshare");
-shareButton.addEventListener('click', function () {
-  var filesArray = document.getElementById('share-files').files
-console.log(document.getElementById('share-files'));
-  var shareData = { files: filesArray };
+// shareButton.addEventListener('click', function () {
+//   var filesArray = document.getElementById('share-files').files
+// console.log(document.getElementById('share-files'));
+//   var shareData = { files: filesArray };
 
-  if (navigator.canShare && navigator.canShare(shareData)) {
+//   if (navigator.canShare && navigator.canShare(shareData)) {
 
-  // Adding title afterwards as navigator.canShare just
-  // takes files as input
-  shareData.title = "Cowin"
-  shareData.url="https://www.flipkart.com/"
+//   // Adding title afterwards as navigator.canShare just
+//   // takes files as input
+//   shareData.title = "Cowin"
+//   shareData.url="https://www.flipkart.com/"
 
-  navigator.share(shareData)
-  .then(() => console.log('Share was successful.'))
-  .catch((error) => console.log('Sharing failed', error));
+//   navigator.share(shareData)
+//   .then(() => console.log('Share was successful.'))
+//   .catch((error) => console.log('Sharing failed', error));
 
-  } else {
-  console.log("Your system doesn't support sharing files.");
-  }
+//   } else {
+//   console.log("Your system doesn't support sharing files.");
+//   }
+// })
+
+function shareNow(fileName) {
+  fetch("/" + fileName)
+.then(function(response) {
+  console.log(response)
+return response.arrayBuffer()
 })
+.then(function(fileBuffer) {
+  console.log(fileBuffer)
+var file = new File([fileBuffer], fileName, {type: "image/png"});
+console.log(file);
+var filesArray = [file];
+      console.log("filesArray", filesArray);
 
+if(navigator.canShare && navigator.canShare({ files: filesArray })) {
+navigator.share({
+  files: filesArray,
+  url: ''
+})
+    .then(() => console.log("Share was successful."))
+    .catch((error) => console.log("Sharing failed", error));
+}
+ else {
+  console.log("Your system doesn't support sharing files.");
+}
+});
+}
+
+  
 
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
