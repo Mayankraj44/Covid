@@ -28,7 +28,7 @@ return response.arrayBuffer()
 })
 .then(function(fileBuffer) {
   console.log(fileBuffer)
-var file = new File([fileBuffer], fileName, {type: "image/jpg"});
+var file = new File([fileBuffer], fileName, {type: "image/png"});
 console.log(file);
 var filesArray = [file];
       console.log("filesArray", filesArray);
