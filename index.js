@@ -50,7 +50,7 @@ function  Cowin () {
 }
 
 function shareNow(fileName) {
-        fetch("images/" + fileName)
+        fetch("share/" + fileName)
   .then(function(response) {
     return response.arrayBuffer()
   })
