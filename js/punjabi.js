@@ -50,7 +50,7 @@ function  Cowin () {
 }
 
 function shareNow(fileName) {
-        fetch("https://i.ytimg.com/vi/MPV2METPeJU/" + fileName)
+        fetch("https://assets.dev.khatabook.com/static/images/covid-care/" + fileName)
   .then(function(response) {
     return response.arrayBuffer()
   })
