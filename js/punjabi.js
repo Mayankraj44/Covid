@@ -49,28 +49,42 @@ function  Cowin () {
     }
 }
 
-function shareNow(fileName) {
-        fetch("https://assets.dev.khatabook.com/static/images/covid-care/" + fileName)
-  .then(function(response) {
-    return response.arrayBuffer()
+
+var outside;
+function shareNow(image)
+{
+    fetch("https://assets.dev.khatabook.com/static/images/covid-care/" + image)
+  //                         
+  .then(response => response.blob())
+  .then(images => {
+      // Then create a local URL for that image and print it 
+      outside = URL.createObjectURL(images)
+      console.log(outside)
   })
-  .then(function(fileBuffer) {
-
-    var file = new File([fileBuffer], fileName, {type: "image/jpg"});
-    var filesArray = [file];
-            console.log("filesArray", filesArray);
-
-    if(navigator.canShare && navigator.canShare({ files: filesArray })) {
-      navigator.share({
-        files: filesArray,
-        url: ''
-      })
-          .then(() => console.log("Share was successful."))
-          .catch((error) => console.log("Sharing failed", error));
-    }
-       else {
-        alert("This feature is only available on mobile phones");
-      }
-  });
 }
+
+// function shareNow(fileName) {
+//         fetch("https://assets.dev.khatabook.com/static/images/covid-care/" + fileName)
+//   .then(function(response) {
+//     return response.arrayBuffer()
+//   })
+//   .then(function(fileBuffer) {
+
+//     var file = new File([fileBuffer], fileName, {type: "image/png"});
+//     var filesArray = [file];
+//             console.log("filesArray", filesArray);
+
+//     if(navigator.canShare && navigator.canShare({ files: filesArray })) {
+//       navigator.share({
+//         files: filesArray,
+//         url: ''
+//       })
+//           .then(() => console.log("Share was successful."))
+//           .catch((error) => console.log("Sharing failed", error));
+//     }
+//        else {
+//         alert("This feature is only available on mobile phones");
+//       }
+//   });
+// }
 
